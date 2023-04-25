@@ -1,0 +1,435 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif !important;
+    color: #eeeeee;
+    background-color: #1C202B !important;
+}
+html{
+    --antd-wave-shadow-color:none !important;
+}
+html::selection{
+    background:none !important;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    background: none;
+    border: inherit;
+    outline: inherit;
+}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+}
+/* MHeader */
+.MHeader{
+    width: 100%;
+    height: 40px;
+    background-color: #1C202B;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.MHeader > div{
+    position: relative;
+}
+.headerLogo{
+    display: block;
+    width: 56px;
+    height: 16px;
+    background-image: url("../img/그룹 6926.svg");
+    background-size: cover;
+    border: none;
+    position: absolute;
+    top: 12px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.headerProfile{
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    transform: translateX(-50%);
+}
+.headerProfile::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent linear-gradient(138deg, #C9C9C9 0%, #506070 100%) 0% 0% no-repeat padding-box;
+}
+.headerProfile::after{
+    content: '';
+    display: block;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    border: 2px solid rgb(28, 32, 43);
+    box-sizing: content-box;
+    background-image: url("../img/마스크 그룹 67.png");
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* NoticeBar */
+.NoticeBar{
+    width: 100%;
+    height: 42px;
+    background-color: #2c3340;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.notice-ani-bg{
+    width: 100%;
+    height: 42px;
+    display: block;
+    background: linear-gradient( -45deg,#2C334000, #eeeeee30, #2C334000) repeat-x;
+    /*background-position: 0 center;*/
+    position: absolute;
+    animation: notice-bg-move 3s cubic-bezier(.41,.13,.47,.92) infinite;
+    animation-delay: -10s;
+}
+@keyframes notice-bg-move {
+    0% { background-position: 0 center;}
+    70% { background-position: 100px center }
+    100% { background-position: 360px center;}
+}
+.notice-bar-icon{
+    width: 30px;
+    height: 21px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    display: block;
+    margin: 10px 0 0 18px;
+    position: relative;
+}
+.notice-bar-icon::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 21px;
+    background: transparent url('../img/그룹 8458.svg') 50% 50% no-repeat padding-box;
+}
+.notice-bar-icon::after{
+    content: '3';
+    display: block;
+    color: #141414;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 900;
+    width: 17px;
+    height: 17px;
+    line-height: 14px;
+    background-color: #eee;
+    border: 2px solid #2c3340;
+    box-sizing: border-box;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+}
+/* ClubNotice */
+.ClubNotice{
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    background-color: #1C202B;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-bottom: 6px;
+}
+.ClubNotice > div{
+    width: 100%;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.c-n-text{
+    font-size: 14px;
+    color: #eeeeee !important;
+    font-weight: 700;
+}
+.c-n-e-button{
+    /* font-size: 10px; */
+    width: 45px;
+    border-radius: 50px;
+    color: #1C202B;
+    background-color: #ffcc00;
+    border: none;
+    height: 21px;
+    margin-left: 15px;
+    font-size: 10px;
+    font-weight: 600;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+    line-height: 22px;
+}
+.c-n-e-badge{
+    background-color: red;
+    color: #fff;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #141414;
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    line-height: 20px;
+}
+.c-n-e-badge::after{
+    content: '2';
+    display: block;
+    width: 17px;
+    height: 17px;
+    color: #fff;
+    font-size: 10px;
+    transform: translate(-2.5px, -3.5px);
+}
+.c-n-m-button{
+    width: 27px;
+    height: 27px;
+    border-radius: 27px;
+    background-color: #50607030;
+    background-image: url("../img/그룹 6863.svg");
+    background-size: 13px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 55px;
+}
+/*MMatchTab*/
+.MMatchTab{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    font-weight: 900;
+    position: relative;
+}
+.ant-tabs-bar{
+    border: none !important;
+    margin: 0 !important;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+    background: none !important;
+    border: none !important;
+    color: #eeeeee40;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 25px !important;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
+    background: none !important;
+    color: #eee !important;
+}
+.match-tab-list::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 15px;
+    background-color: #eeeeee40;
+}
+/*MGameTab*/
+.MGameTab{
+    width: 100%;
+
+}
+.MGameTab .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+    background: none !important;
+    border: none !important;
+    color: #eeeeee40;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 6px !important;
+}
+.MGameTab .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
+    border-bottom: 2px solid #aaff00 !important;
+}
+.MGameTab .ant-tabs-nav{
+    width: 100%;
+    padding: 0 16px;
+}
+.MGameTab .ant-tabs-nav > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.MGameTab .ant-tabs-bar{
+    border-bottom: 1px solid #50607050 !important;
+}
+.MGameTabList{
+    /*position: sticky;*/
+    /*top: 0px;*/
+}
+/*p-t-box*/
+.p-t-box{
+    /*position: sticky;*/
+    /*top: 78px;*/
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+}
+.match-btn-group{
+    display: flex !important;
+    align-items: center;
+}
+.ant-radio-button-wrapper:first-child{
+    border: 1px solid transparent !important;
+}
+.p-t-box.ant-radio-button-wrapper:first-child ,.ant-radio-button-wrapper:first-child{
+    border-color: #50607080 !important;
+}
+.p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover .match-all-btn-num, .p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover .match-fav-btn-num{
+    color:#AAFF00 !important;
+}
+.p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) .match-all-btn-num, .p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) .match-fav-btn-num{
+    color:#AAFF00 !important;
+}
+.match-all-btn, .match-major-btn, .match-fav-btn{
+    color: #eeeeee80 !important;
+    border: 1px solid #50607080 !important;
+    background-color: #1C202B !important;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    color: #eee !important;
+    background-color:rgba(80, 96, 112, 0.3) !important;
+    border-color: #50607020 !important;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover{
+    color: #eee !important;
+    background-color:rgba(80, 96, 112, 0.3) !important;
+    border-color: #50607020 !important;
+}
+.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    box-shadow: none !important;
+}
+.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):focus-within{
+    outline: none !important;
+}
+.match-all-btn span, .match-major-btn span, .match-fav-btn span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.match-all-btn, .match-major-btn, .match-fav-btn{
+    font-weight: 600;
+    color: rgba(238, 238, 238,0.7);
+    margin: 0 9px 0 0 !important;
+}
+.match-all-btn{
+    width: 80px;
+    height: 34px;
+    font-size: 12px;
+    border-radius: 17px !important;
+    margin-right: 7px;
+}
+.match-major-btn{
+    width: 80px;
+    height: 34px;
+    font-size: 12px;
+    border-radius: 17px;
+    margin-right: 7px
+}
+.match-fav-btn{
+    width: 72px;
+    height: 34px;
+    font-size: 12px;
+    border-radius: 17px !important;
+}
+.p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover .fill{
+    fill: #ffcc00 !important;
+}
+.p-t-box .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) .fill{
+    fill: #ffcc00 !important;
+}
+.panel-tab-btn{
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/그룹 6908.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-color: #dddddd !important;
+    border-radius: 17px;
+}
+.ant-radio-button-wrapper:not(:first-child)::before{
+    display: none !important;
+}
+/*MBanner*/
+.MBanner{
+    width: 100%;
+    display: block;
+    position: absolute;
+}
+.MBanner::after{
+    content: '';
+    display: block;
+    padding-bottom: 40%;
+}
+#banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 0 0 0 10px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.banner-img1, .banner-img2, .banner-img3{
+    display: block;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+}
+.banner-img1{
+    background: url("../img/banner (1).png") no-repeat;
+}
+.banner-img2{
+    background: url("../img/banner (2).png") no-repeat;
+}
+.banner-img3{
+    background: url("../img/banner (3).png") no-repeat;
+}
