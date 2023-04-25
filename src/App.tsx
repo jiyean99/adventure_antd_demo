@@ -5,6 +5,7 @@ import MHeader from './MainComponents/MHeader'
 import MNoticeBar from './MainComponents/MNoticeBar'
 import MClubNotice from './MainComponents/MClubNotice'
 import MMatchTab from './MainComponents/MMatchTab'
+import MBottomBar from './MainComponents/MBottomBar'
 
 
 const App: React.FC = () => {
@@ -15,6 +16,7 @@ const App: React.FC = () => {
             <MNoticeBar />
             <MClubNotice />
             <MMatchTab />
+            <MBottomBar />
         </Fragment>
     )
 }

@@ -16,7 +16,7 @@ const MMatchTab: React.FC = () => {
           <MGameTab />
         </TabPane>
         <TabPane tab="라이브" key="2">
-          live tab contents
+          <MGameTab />
         </TabPane>
       </Tabs>
     </div>

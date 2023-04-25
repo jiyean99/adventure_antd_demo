@@ -4,6 +4,7 @@ import '../index.css'
 import '../style/style.css'
 import { Tabs, Radio, Button  } from 'antd';
 import MBanner from './Mbanner'
+import MDivideBoard from './MDivideBoard'
 
 
 const MGameTab: React.FC = () => {
@@ -12,7 +13,7 @@ const MGameTab: React.FC = () => {
 
   return (
     <div className="MGameTab">
-      <Tabs type="card" className="MGameTabList">
+      <Tabs type="card" className="MSticky">
         <TabPane tab="전체" key="1">
           {/*contents*/}
         </TabPane>
@@ -55,6 +56,11 @@ const MGameTab: React.FC = () => {
       </div>
       <MBanner />
       <div style={{ paddingBottom: "calc(40% + 9px)"}}/>
+      <MDivideBoard />
+      <MDivideBoard />
+      <MDivideBoard />
+      <MDivideBoard />
+
     </div>
   )
 }
