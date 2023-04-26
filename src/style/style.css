@@ -571,11 +571,11 @@ button{
 /*    100%{ scale: 1.2; }*/
 /*}*/
 @keyframes clickEffect1{
-    0%{ scale: 0.8; }
-    30%{ scale: 1.2; }
-    60% { scale : 0.8; }
+    0%{ scale: 0.9; }
+    30%{ scale: 1.1; }
+    60% { scale : 0.9; }
     90% { scale : 1; }
-    100%{ scale: 0.8; }
+    100%{ scale: 0.9; }
 }
 .fav-icon-bg{
     position: absolute;
