@@ -553,20 +553,29 @@ button{
 .d-b-icon2:hover svg{
     animation: clickEffect1;
     animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.43, -0.78, 0, 1.66);
     fill: #fc0;
 }
 .d-b-icon2:active svg{
     animation: clickEffect1;
-    animation-duration: 0.6s;
+    animation-duration: 0.4s;
+    animation-timing-function: cubic-bezier(0.43, -0.78, 0, 1.66);
     fill: #fc0;
 }
+/*@keyframes clickEffect1{*/
+/*    0%{ scale: 0.8; }*/
+/*    20%{ scale: 1.2; }*/
+/*    40% { scale : 0.8; }*/
+/*    60% { scale : 1.2; }*/
+/*    80% { scale: 0.8; }*/
+/*    100%{ scale: 1.2; }*/
+/*}*/
 @keyframes clickEffect1{
     0%{ scale: 0.8; }
-    20%{ scale: 1.2 ;}
-    40% { scale : 0.8; }
-    60% { scale : 1.2; }
-    80% { scale: 0.8; }
-    100%{ scale: 1.2; }
+    30%{ scale: 1.2; }
+    60% { scale : 0.8; }
+    90% { scale : 1; }
+    100%{ scale: 0.8; }
 }
 .fav-icon-bg{
     position: absolute;
@@ -574,34 +583,80 @@ button{
     left: 50%;
     transform: translate(-50%,-50%);
     display: block;
-    width: 14px;
-    height: 14px;
-    background: repeating-radial-gradient(#fc0, transparent 3px);
+    width: 1px;
+    height: 1px;
+    /*background: repeating-radial-gradient(#fc0, transparent 3px);*/
+    background: #fc0;
     box-sizing:border-box;
     border-radius:50%;
+    opacity: 1;
+}
+/*cliskeffect2 위에꺼 사용 시 주석 해제*/
+/*.d-b-icon2:active .fav-icon-bg{*/
+/*    animation:clickEffect2 0.6s;*/
+/*}*/
+/*.d-b-icon2:hover .fav-icon-bg{*/
+/*    animation:clickEffect2 0.6s;*/
+/*}*/
+
+.d-b-icon2:active .fav-icon-bg::before, .d-b-icon2:active .fav-icon-bg::after,.d-b-icon2:hover .fav-icon-bg::before, .d-b-icon2:hover .fav-icon-bg::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: translate(-50%,-50%);
+    background: #ffcc00;
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
     opacity: 0;
+    animation: clickEffect2 650ms ease-out;
 }
-.d-b-icon2:active .fav-icon-bg{
-    animation:clickEffect2 0.6s;
+.d-b-icon2:hover .fav-icon-bg::before, .d-b-icon2:hover .fav-icon-bg::after{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: translate(-50%,-50%);
+    background: #ffcc00;
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: clickEffect2 650ms ease-out;
 }
-.d-b-icon2:hover .fav-icon-bg{
-    animation:clickEffect2 0.6s;
+.d-b-icon2:active .fav-icon-bg::after, .d-b-icon2:hover .fav-icon-bg::after{
+    animation: clickEffect2 650ms 100ms ease-out;
 }
 @keyframes clickEffect2{
-    0%{
-        opacity:0.8;
-        width: 0;
-        height: 0;
-        /*border-width:1px;*/
+    /*0%{*/
+    /*    opacity:0.8;*/
+    /*    width: 0;*/
+    /*    height: 0;*/
+    /*}*/
+    /*80%{*/
+    /*    opacity:0.5;*/
+    /*    width: 80%;*/
+    /*    height: 80%;*/
+    /*}*/
+    /*100%{*/
+    /*    opacity:0;*/
+    /*}*/
+    0% {
+        transform: scale(0);
+        opacity: 1;
     }
-    80%{
-        opacity:0.5;
-        width: 80%;
-        height: 80%;
-        /*border-width:1px;*/
+    70% {
+        transform: scale(1.2);
+        opacity: 0;
     }
-    100%{
-        opacity:0;
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
     }
 }
 .d-b-icon3{
