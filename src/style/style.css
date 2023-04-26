@@ -108,19 +108,21 @@ button{
     font-family: "Noto Sans KR", sans-serif;
 }
 .notice-ani-bg{
-    width: 100%;
+    width: 300%;
     height: 42px;
     display: block;
-    background: linear-gradient( -45deg,#2C334000, #eeeeee30, #2C334000) repeat-x;
+    background: linear-gradient( -45deg, #2C334000, #eeeeee30, #2C334000) repeat-x;
     /*background-position: 0 center;*/
     position: absolute;
     animation: notice-bg-move 3s cubic-bezier(.41,.13,.47,.92) infinite;
-    animation-delay: -10s;
+    /*animation-delay: -10s;*/
 }
 @keyframes notice-bg-move {
-    0% { background-position: 0 center;}
-    70% { background-position: 100px center }
-    100% { background-position: 360px center;}
+    /*0% { background-position: 0 center;}*/
+    /*!*70% { background-position: 100px center }*!*/
+    /*100% { background-position: 360px center;}*/
+    0% {transform:translateX(-100%) skewX(-15deg);;}
+    100% {transform:translateX(100%) skewX(-15deg);;}
 }
 .notice-bar-icon{
     width: 30px;
@@ -744,7 +746,7 @@ button{
     display: flex;
     width: 100%;
     padding: 0 14px;
-    margin: 4px 0 0 0;
+    /*margin: 4px 0 0 0;*/
     flex-wrap: wrap;
     justify-content: space-between;
 }
