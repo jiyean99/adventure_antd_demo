@@ -289,14 +289,17 @@ button{
     border-bottom: 1px solid #50607050 !important;
 }
 .MSticky{
-    /*position: fixed;*/
-    /*position: sticky;*/
-    /*top: 39px;*/
+    position: sticky;
+    top: 39px;
+    z-index: 50;
+    background-color: #1C202B;
 }
 /*p-t-box*/
 .p-t-box{
-    /*position: sticky;*/
-    /*top: 78px;*/
+    position: sticky;
+    top: 78px;
+    z-index: 50;
+    background-color: #1C202B;
     width: 100%;
     height: 54px;
     display: flex;
@@ -440,7 +443,6 @@ button{
     display: block;
     padding: 0 16px;
     margin-bottom: 6px;
-    /* padding: 15px 16px; */
 }
 .ant-btn{
     border: none;
@@ -648,6 +650,7 @@ button{
     font-size: 12px;
     font-weight: 500;
     color: #eee;
+    text-align: left;
 }
 .d-b-board .league-table-group span{
     padding: 0 4px;

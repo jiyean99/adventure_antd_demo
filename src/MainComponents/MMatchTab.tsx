@@ -13,12 +13,11 @@ const MMatchTab: React.FC = () => {
     <div className="MMatchTab">
       <Tabs type="card" className="match-tab-list">
         <TabPane tab="스포츠" key="1">
-          <MGameTab />
         </TabPane>
         <TabPane tab="라이브" key="2">
-          <MGameTab />
         </TabPane>
       </Tabs>
+      <MGameTab />
     </div>
   )
 }

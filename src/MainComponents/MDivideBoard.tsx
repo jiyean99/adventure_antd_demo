@@ -4,9 +4,9 @@ import '../index.css'
 import '../style/style.css'
 import { Button, Radio, Typography } from 'antd';
 import { RadioChangeEvent } from 'antd/es/radio';
-
-
+import { Accordion, List } from 'antd-mobile';
 const { Text } = Typography;
+
 
 const MDivideBoard: React.FC = () => {
 
@@ -76,6 +76,10 @@ const MDivideBoard: React.FC = () => {
             <Radio.Button value="4" className='d-b-btn' disabled={disabled[3]} >
               <span>홈 승</span><span className='d-b-num'>1.93</span>
             </Radio.Button>
+            {/*<Accordion defaultActiveKey="0" className="my-accordion">*/}
+            {/*  <Accordion.Panel header="H 0.5" className="pad">*/}
+            {/*  </Accordion.Panel>*/}
+            {/*</Accordion>*/}
             <Radio.Button value="5" className='d-b-btn accodian' disabled>
               <span className='aco-position'>H</span><span className='aco-num'>0.5</span>
             </Radio.Button>

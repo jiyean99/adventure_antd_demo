@@ -13,29 +13,31 @@ const MGameTab: React.FC = () => {
 
   return (
     <div className="MGameTab">
-      <Tabs type="card" className="MSticky">
-        <TabPane tab="전체" key="1">
-          {/*contents*/}
-        </TabPane>
-        <TabPane tab="축구" key="2">
-          {/*S-contents*/}
-        </TabPane>
-        <TabPane tab="농구" key="3">
-          {/*B-contents*/}
-        </TabPane>
-        <TabPane tab="야구" key="4">
-          {/*B-contents*/}
-        </TabPane>
-        <TabPane tab="배구" key="5">
-          {/*V-contents*/}
-        </TabPane>
-        <TabPane tab="아이스하키" key="6">
-          {/*I-contents*/}
-        </TabPane>
-        <TabPane tab="기타" key="7">
-          {/*act-contents*/}
-        </TabPane>
-      </Tabs>
+      <div className="MSticky">
+        <Tabs type="card">
+          <TabPane tab="전체" key="1">
+            {/*contents*/}
+          </TabPane>
+          <TabPane tab="축구" key="2">
+            {/*S-contents*/}
+          </TabPane>
+          <TabPane tab="농구" key="3">
+            {/*B-contents*/}
+          </TabPane>
+          <TabPane tab="야구" key="4">
+            {/*B-contents*/}
+          </TabPane>
+          <TabPane tab="배구" key="5">
+            {/*V-contents*/}
+          </TabPane>
+          <TabPane tab="아이스하키" key="6">
+            {/*I-contents*/}
+          </TabPane>
+          <TabPane tab="기타" key="7">
+            {/*act-contents*/}
+          </TabPane>
+        </Tabs>
+      </div>
       <div className='p-t-box'>
         <Radio.Group buttonStyle="solid" defaultValue="all" className='match-btn-group'>
           <Radio.Button value="all" className='match-all-btn'>
